@@ -14,7 +14,7 @@ class DebugNine1
       books[3][0] = "Great Gatsby";
       books[3][2] = "F. Scott Fitzgerald";
       books[4][0] = "1984";
-      books[3][1] = "George Orwell;
+      books[3][1] = "George Orwell";
       books[5][0] = "Sound and the Fury";
       books[5][1] = "William Faulkner";
 
@@ -35,8 +35,10 @@ class DebugNine1
                 books[x][0] + " was written by " + books[x][2]);
              x = books.length;
             }
-         if(isFound)
+         if(isFound) {
             JOptionPane.showMessageDialog(null, "Sorry - no such book in our database");
+            isFound = false;
+         }
       }
    }
 }
