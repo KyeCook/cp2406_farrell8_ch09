@@ -16,9 +16,10 @@ public class DebugNine2
       movies[7] = new Movie("Some Like It Hot", 1959);
       entry = JOptionPane.showInputDialog(null,
         "Sort Movies by\n(N)ame, or (Y)ear");
+
       if(entry.contains("N"))
       {
-         nameSort(movies);
+         nameSort(Movie[n]);
          message = "Sorted by Name\n";
       }
       else
@@ -26,7 +27,7 @@ public class DebugNine2
           yearSort(movies);
           message = "Sorted by Year\n";
       }   
-      display(movies, message);
+      display(Movie, message);
    }
    public static void nameSort(Movie[] array)
    {
