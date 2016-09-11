@@ -22,23 +22,21 @@ class DebugNine1
          shortEntry,
          message ="Enter the first three characters of a book title omitting \"A\" or \"The\" ";
       int num, x;
-      boolean isFound = true;
+      boolean isFound = false;
       while(!isFound)
       {
          entry = JOptionPane.showInputDialog(null, message);
-         shortEntry = entry.substring(3);
+         shortEntry = entry.substring(0, 3);
          for(x = 0; x < books.length; ++x)
-            if(books[x][0].startsWith(entry))
+            if(books[x][0].startsWith(shortEntry))
             {
              isFound = true;
              JOptionPane.showMessageDialog(null,
-                books[x][0] + " was written by " + books[x][2]);
+                books[x][0] + " was written by " + books[x][1]);
              x = books.length;
             }
-         if(isFound) {
+         if(!isFound)
             JOptionPane.showMessageDialog(null, "Sorry - no such book in our database");
-            isFound = false;
-         }
       }
    }
 }
